@@ -1,0 +1,70 @@
+*{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    list-style:none;
+    text-decoration:none;
+}
+.navbar ul
+{
+    display:block;
+
+}
+.navbar ul li
+{
+    float:right;
+    padding:7px;
+}
+.navbar ul li a{color:black}
+.navbar ul li a:hover{
+    background-color:rgb(40, 104, 241);
+    padding:5px;
+    border-radius: 3px;
+}
+fieldset
+{
+    margin-top: 35px;
+    width: 350px;
+    height: 450px;
+}
+input[type="text"]
+{
+    margin-top:12%;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding: 7px;
+}
+input[type="tel"]
+{
+    margin-top:10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding: 7px;
+}
+input[type="email"] {
+    margin-top:10px;
+    padding: 7px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+input[type="password"] {
+    margin-top:10px;
+    padding: 7px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+.btn
+{
+    background-color:rgb(40, 104, 241);
+    border:1px none;
+    height:30px;
+    width:120px;
+    border-radius: 5px;
+    box-shadow:3px 3px 2px 1px rgb(122, 120, 120);
+    margin-top: 15px;
+    padding:7px;
+    padding-bottom: 3px;
+  
+}
+.coin
+{
+    margin-top:20px;
+}

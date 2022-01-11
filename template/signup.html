@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financers-SignUP</title>
+    <link rel="stylesheet" href="{% static '/signup.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="./help.html">Help</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./home.html">Home</a></li>
+        </ul>
+    </nav>
+    <br>
+    <center>
+        <fieldset>
+            <form method="post" action="./login.html">
+                {% csrf_token %}
+                <img src="https://bit.ly/32WLgw0" alt="coin image" class="coin"><br>
+                <input type="text" placeholder="Enter your name" name="user" required><br>
+                <input type="tel" placeholder="Contact Number" name="contact"required><br>
+                <input type="email" placeholder="username-email" name="username"required><br>
+                <input type="password" placeholder="password" name="password"required><br>
+                <input type="submit" value="Create Account" class="btn"><br><br>
+                <input type="checkbox" required> I want to Create my account
+            </form>
+        </fieldset>
+   
+</center>
+</body>
+</html>

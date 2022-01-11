@@ -1,0 +1,244 @@
+*{
+    list-style:none;
+    margin:0px;
+    text-decoration: none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.container { 
+    display: grid;
+    grid-template-columns: 0.5fr 2.1fr 0.4fr;
+    grid-template-rows: 0.3fr 0.4fr 1.8fr 1.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "user-greet date wallet"
+      "Nav stock-details wallet"
+      "Nav chart wallet"
+      "Nav Suggestion Company";
+      background-color: #ffffff;
+  }
+
+  .Nav { 
+      margin-top:10px;
+      grid-area: Nav; 
+      background-color: #ffffff;
+      border-top-right-radius: 7px;
+      border-bottom-right-radius: 7px;
+      width: 150px;
+      height:530px;
+      text-align:left;
+      box-shadow: 2px 3px 5px rgb(92, 91, 91);
+
+
+     }
+   a{
+     color:black;
+    }
+    a:hover
+    {
+      background-color:#324b6a;
+      border-radius: 5px;
+      padding:7px;
+      width:120px ;
+    }
+
+   .Nav ul li
+   {
+        margin-top: 25px;
+        padding:9px;
+        margin-top:10px;
+   }  
+  
+  .user-greet { 
+      grid-area: user-greet;
+      background-color: #ffffff;
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 7px;
+      margin-top:5px;
+      margin-right:17px;
+      width: 250px;
+      box-shadow: 2px 3px 5px rgb(92, 91, 91);
+      text-align: center;
+      padding:7px;
+     }
+  
+  .date { 
+      grid-area: date;
+      background-color: #ffffff;
+      border-bottom-left-radius:7px;
+      border-bottom-right-radius:7px;
+      width: 250px;
+      margin-left:155px;
+      margin-top:5px;
+      text-align:center;
+      padding:5px;
+      box-shadow: 2px 3px 5px rgb(92, 91, 91);
+     }
+  
+  /*.stock-details { 
+    margin-top:3px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . ."
+      ". . ."
+      ". . .";
+    grid-area: stock-details;
+    background-color: #ffffff;
+    border-radius: 7px;
+    box-shadow: 2px 3px 5px rgb(92, 91, 91);
+  }*/
+
+
+  .high
+  {
+    
+    width:250px;
+    margin-top:17px;
+    padding:7px;
+    height:25px;
+    border-radius:7px;
+    margin-left:-27px;
+    box-shadow: 2px 3px 5px rgb(92, 91, 91);
+    
+  }
+  .low
+  {
+    width:250px;
+    margin-top:-38px;
+    margin-left:275px;
+    height:25px;
+    padding:7px;
+    border-radius:7px;
+    box-shadow: 2px 3px 5px rgb(92, 91, 91);
+  }
+  .volume
+  {
+    margin-left:555px;
+    margin-top:-38px;
+    margin-left:575px;
+    width:250px;
+    height:25px;
+    padding:7px;
+    border-radius:7px;
+    box-shadow: 2px 3px 5px rgb(92, 91, 91);
+  }
+  .chart { 
+      grid-area: chart;
+      height:450px;
+      width:450px;
+      border-radius: 7px;
+      background-color: #ffffff;
+     }
+  
+  .wallet { 
+      grid-area: wallet;
+      margin-top:5px;
+      background-color: #274c6f;
+      color:gold;
+      border-top-left-radius:7px;
+      border-bottom-left-radius:7px;
+      height:250px;
+      width:150px;
+      box-shadow: 2px 3px 5px rgb(92, 91, 91);
+     }
+    .wallet ul li
+    {
+      margin-top: 7px;
+      padding:7px;
+      
+    }
+  
+  /*.Suggestion {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Stock-suggestion Stock-suggestion Stock-suggestion"
+      "Stock-suggestion Stock-suggestion Stock-suggestion"
+      "News News News";
+    grid-area: Suggestion;
+  }*/
+  
+  .Stock-suggestion { 
+      grid-area: Stock-suggestion;
+      border-radius: 7px;
+      margin-right: 75px;
+      box-shadow: 2px 3px 5px rgb(92, 91, 91);
+      margin-top: -490px;
+    
+    }
+   
+    .Stock-suggestion ul
+    {
+      display: flex;
+      height: 100px;
+      margin-top:10px;
+      margin-right:105px;
+    }
+    .Stock-suggestion ul li
+    {
+      padding:20px;
+      margin-right: 15px;
+
+    }
+  
+  .News {
+       grid-area: News;
+       margin-top:15px;
+       height:250px;
+       border-radius: 7px;
+       margin-left: -22px;
+       box-shadow: 2px 3px 5px rgb(92, 91, 91);
+     }
+  
+  .Company { 
+      grid-area: Company;
+      background-color:#ddf7fd;
+      border-top-left-radius:7px;
+      border-bottom-left-radius:7px;
+      margin-top: -350px;
+      height:350px;
+      width:150px;
+      box-shadow: 2px 3px 5px rgb(92, 91, 91);
+     }
+  .Company ul li
+  {
+    padding:7px;
+    margin-top:7px;
+  }
+  canvas
+  {
+    
+    border-radius:7px;
+    box-shadow: 2px 3px 5px rgb(92, 91, 91);
+  }
+  #buy-stock
+  {
+    margin-top:-210px;
+    width:90px;
+    height: 30px;
+    border-radius: 7px;
+    border-style: none;
+    background-color: rgba(68, 218, 68, 0.801);
+
+  }
+  #sell-stock
+  {
+    margin-top:-590px;
+    width:90px;
+    height: 30px;
+    border-radius: 7px;
+    border-style: none;
+    background-color: rgba(238, 5, 5, 0.801);
+  }
+  #chart
+  {
+    width: 450px;
+  }

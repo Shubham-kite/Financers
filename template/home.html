@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financers-Homepage</title>
+    <link rel="stylesheet" href="{% static '/home.css' %}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="./help.html">Help</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./login.html">SignIn</a></li>
+            
+        </ul>
+    </nav>
+    <div class="greet">
+        <h3>Hello India!</h3>
+        <h2>Investing is Simple,<br>Transparent & for everyone</h2>
+        <a href="./login.html"><input type="button" value="Start Investing" class="btn"></a>
+      
+    </div>
+    <img src="https://www.paytmmoney.com/_next/static/images/global-banner-illustration-3517c38b1e2348c0973f8ecd68e24a42.svg" height="275" width="645" class="img1"><br>
+
+    <!----Blocks of stock and mutual-->
+    <div class="block1">
+        <img src="https://www.paytmmoney.com/static/images/global-landing-page/equity-icon.svg" height="150" width="150">
+        <p>
+            <b>Stock-Market</b><br>
+        </p>
+    </div> 
+    <div class="block2">
+        <img src="https://www.paytmmoney.com/static/images/global-landing-page/mutual-fund-icon.svg" height="150" width="150">
+        <p>
+            <b>Mutual-Fund</b>
+        </p>
+    </div>
+
+</body>
+</html>

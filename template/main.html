@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{% static '/main.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="Nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">MyAccount</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </div>
+    <div class="user-greet">
+      <h3>Hello user</h3>
+    </div>
+    <div class="date">
+      <p id="time"></p>
+      <script src="{% static '/calender.js' %}"></script>
+    </div>
+    <div class="stock-details">
+      <div class="high">high</div>
+      <div class="low">low</div>
+      <div class="volume">vol</div>
+    </div>
+    <div class="chart">
+      <canvas id="chart"></canvas>
+     <script src="{% static '/stock.js' %}"></script>
+    </div>
+    <input type="button" value="buy" id="buy-stock"><input type="button" value="sell" id="sell-stock">
+    <div class="wallet">
+      <ul>
+        <li>Invested :</li>
+        <li>Profit :</li>
+        <li>Fund:</li>
+      </ul>
+    </div>
+    <div class="Suggestion">
+      <div class="Stock-suggestion">
+        <ul>
+          <li>BUY <progress max="100" value="23"></progress></li>
+          <li>HOLD <progress max="100"value="68"></progress></li>
+          <li>SELL<progress max="100"value="45"></progress></li>
+        </ul>
+      </div>
+      <div class="News">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus commodi ad aperiam excepturi aliquam corporis.
+      </div>
+    </div>
+    <div class="Company">
+      <ul>
+        <li>Tata</li>
+        <li>IBM</li>
+        <li>MSFT</li>
+        <li>APPL</li>
+        <li>GOOGL</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

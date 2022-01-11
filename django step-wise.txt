@@ -1,0 +1,18 @@
+To start project django- admin startproject 'project_name'
+To create app(sub page)- python manage.py startapp 'app_name'
+To runserver - python manage.py runserver
+for html create template folder and for css js and img create static folder in which manage.py lies
+In main urls.py -> add path for app.urls
+add urls.py in app
+import views in app urls file
+in view define your function
+
+
+// model
+Inside model folder
+1)create a model usign class 'model name'(Models.model)
+2) register your model in admin section ->
+                                        1)import app.model.*
+                                        2)admin.site.register('model name')
+3)register your app :
+                    1)
