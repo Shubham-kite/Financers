@@ -1,6 +1,6 @@
 from django.shortcuts import render,HttpResponse
 #importing models
-from home.models import *
+from .models import UserInfo
 
 
 # Create your views here.
@@ -14,8 +14,7 @@ def login(request):
         passwd = request.POST.get("password")
         contact = request.POST.get("contact")
         #posting data into db 
-        userdata = User(name = name,email = email,password = passwd,contact = contact)
-        userdata.save()
+        userdata = UserInfo(name = name,email = email,password = passwd,contact = contact).save()
     return render(request,"login.html")
 
 def signup(request):
