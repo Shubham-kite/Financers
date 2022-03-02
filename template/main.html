@@ -1,69 +1,78 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  {% load static %}
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="{% static '/main.css' %}">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mainui</title>
+    <link rel="stylesheet" href="{% static '/main.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 <body>
-  <div class="container">
-    <div class="Nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">MyAccount</a></li>
-        <li><a href="#">Help</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Logout</a></li>
-      </ul>
-    </div>
-    <div class="user-greet">
-      <h3>Hello user</h3>
-    </div>
-    <div class="date">
-      <p id="time"></p>
-      <script src="{% static '/calender.js' %}"></script>
-    </div>
-    <div class="stock-details">
-      <div class="high">high</div>
-      <div class="low">low</div>
-      <div class="volume">vol</div>
+
+        <p id="user">Hello User</p>
+ 
+        <p id="cal"><script src="{% static '/calender.js' %}"></script></p> 
+        <div class="nav">
+            <ul>
+                <li>Home</li>
+                <li>#</li>
+                <li>#</li>
+                <li>Help</li>
+                <li>LogOut</li>
+            </ul>
+        </div>
+    <div class="Calculation">
+        <ul>
+            <li>High : </li>
+            <li>Low : </li>
+            <li>Volume : </li>
+        </ul>
     </div>
     <div class="chart">
-      <canvas id="chart"></canvas>
-     <script src="{% static '/stock.js' %}"></script>
+        <canvas id="chart">
+            <script src="{% static '/stock.js' %}"></script>
+        </canvas>
     </div>
-    <input type="button" value="buy" id="buy-stock"><input type="button" value="sell" id="sell-stock">
-    <div class="wallet">
-      <ul>
-        <li>Invested :</li>
-        <li>Profit :</li>
-        <li>Fund:</li>
-      </ul>
+    <div class="btn">
+        <input type="button" value="Buy" id="buy-btn"> <input type="button" value="Sell" id="sell-btn">
     </div>
-    <div class="Suggestion">
-      <div class="Stock-suggestion">
+    
+    <div class="suggestion">
         <ul>
-          <li>BUY <progress max="100" value="23"></progress></li>
-          <li>HOLD <progress max="100"value="68"></progress></li>
-          <li>SELL<progress max="100"value="45"></progress></li>
+            <li>Buy <progress value="54" max="100">54</progress></li>
+            <li>Hold <progress value="34" max="100">54</progress></li>
+            <li>Sell <progress value="75" max="100">54</progress></li>
         </ul>
-      </div>
-      <div class="News">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus commodi ad aperiam excepturi aliquam corporis.
-      </div>
     </div>
-    <div class="Company">
-      <ul>
-        <li>Tata</li>
-        <li>IBM</li>
-        <li>MSFT</li>
-        <li>APPL</li>
-        <li>GOOGL</li>
-      </ul>
+<!------------------------------->    
+    <div class="wallet">
+        
+        <ul>
+            <li><b>Top Gainers:</b></li>
+            <li>TATA</li>
+            <li>JIO</li>
+            <li>TESALA</li>
+            <li>META</li>
+        </ul>
     </div>
-  </div>
+<div class="compnay">
+    <ul>
+        <li><b>compnay</b></li>
+        <li>Bank Of Baroda</li>
+        <li>Paytm</li>
+        <li>Reliance</li>
+        <li>Tata Motors</li>
+        <li>Vodafone Idea</li>
+        <li>Yes Bank</li>
+        <li>Jaiprakash Power</li>
+    </ul>
+</div>
+<div class="news">
+    Lorem ipsum dolor sit amet consectetur,<br>
+     adipisicing elit. Mollitia explicabo quam suscipit culpa, <br>
+     voluptatibus molestiae?
+</div>
 </body>
 </html>

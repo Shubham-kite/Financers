@@ -1,7 +1,12 @@
 *{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     list-style:none;
     text-decoration:none;
+    border-style:none;
+    
+}
+body{
+    background-color:#EEEEEE;
 }
 /*------------------------Navigation--------------------------*/
 .navbar ul
@@ -48,6 +53,8 @@
 .img1
 {
     float: right;
+    box-shadow: 1px 2px 3px 4px #D8D2CB;
+    border-radius: 7px;
 }
 .block1
 {
@@ -56,6 +63,8 @@
     border-style:groove;
     height:250px;
     margin-top:45px;
+    box-shadow: 1px 2px 3px 4px #D8D2CB;
+    border-radius: 7px;
 
 }
 .block2
@@ -67,5 +76,7 @@
     margin-top:45px;
     margin-left:25%;
     margin-top:-19.5%;
+    box-shadow: 1px 2px 3px 4px #D8D2CB;
+    border-radius: 7px;
 
 }
