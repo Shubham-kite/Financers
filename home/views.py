@@ -21,7 +21,8 @@ def signup(request):
     return render(request,"signup.html")
 def main(request):
     return render(request,"main.html")
-
+def wallet(request):
+    return render(request,"wallet.html")
 def help(request):
     return render(request,"help.html")
 

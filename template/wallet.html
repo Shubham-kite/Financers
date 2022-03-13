@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/flex.css '%}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-section">
+            <div class="Nav">
+                <ul>
+                    <li>Home</li>
+                    <li>Invest</li>
+                    <li>chart</li>
+                    <li>Help</li>
+                    <li>Logout</li>
+                </ul>
+            </div>
+        </div>
+       <div class="area1">
+        <div class="Bar">
+            <h2>bar</h2>
+            <canvas id="bar"></canvas>
+            <script src="{% static '/bar.js' %}"></script>
+        </div>
+        <div class="advs">
+            
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt odit excepturi dolore quas? <br>
+            Repellat deleniti nam praesentium nulla. Fuga sapiente atque, 
+            <br>sed cum inventore aliquid. Aut iure vel obcaecati adipisci alias <br>
+            consectetur id quas <br>harum dolorum iste maxime rem repellendus<br>
+            voluptates veritatis blanditiis accusamus eaque quia doloribus
+    </div>
+       </div>
+        <div class="area2">
+            <div class="reg">
+                <h2>reg-chart</h2>
+                <canvas id="reg"></canvas>
+                <script src="{% static '/reg.js' %}"></script>
+            </div>
+           
+            <div class="pie">
+                <h2>pie-chart</h2>
+                <canvas  id="pie"></canvas>
+                <script src="{% static '/pie.js' %}"></script>
+            </div>
+        </div>
+       
+      </div>
+</body>
+</html>

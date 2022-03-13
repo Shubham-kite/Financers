@@ -10,5 +10,6 @@ urlpatterns = [
     path('about.html',views.about,name="about"),
     path('main.html',views.main,name="main"),
     path('login',views.login,name="loginpage"),
+    path('wallet.html',views.wallet,name="wallet-page")
 
 ]
