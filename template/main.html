@@ -1,19 +1,18 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mainui</title>
-    <link rel="stylesheet" href="{% static '/main.css' %}">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-</head>
-<body>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mainui</title>
+        <link rel="stylesheet" href="{% static '/main.css' %}">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    </head>
+    <body>
         <p id="user">Hello User</p>
- 
-        <p id="cal"><script src="{% static '/calender.js' %}"></script></p> 
+        
+        <p id="cal"><script src="{% static '/calender.js' %}"></script></p>
         <div class="nav">
             <ul>
                 <li>Home</li>
@@ -23,58 +22,96 @@
                 <li>LogOut</li>
             </ul>
         </div>
-    <div class="Calculation">
-        <ul>
-            <li>High : </li>
-            <li>Low : </li>
-            <li>Volume : </li>
-        </ul>
-    </div>
-    <div class="chart">
-        <canvas id="chart">
+        <div class="Calculation">
+            {% block content %}
+                <ul>
+                    <li>High :{{stock.high}} </li>
+                    <li>Low : {{stock.low}}</li>
+                    <li>Volume :{{stock.volume}} </li>
+                </ul>
+            {% endblock %}
+        </div>
+        <div class="chart">
+            <canvas id="chart">
             <script src="{% static '/stock.js' %}"></script>
-        </canvas>
-    </div>
-    <div class="btn">
-        <a href="./login.html"><input type="button" value="Buy" id="buy-btn"></a>
-        <a href="./login.html"><input type="button" value="Sell" id="sell-btn"></a>
+            </canvas>
+        </div>
+        <div class="btn">
+            <a href="./login.html"><input type="button" value="Buy" id="buy-btn"></a>
+            <a href="./login.html"><input type="button" value="Sell" id="sell-btn"></a>
+            
+        </div>
         
-    </div>
-    
-    <div class="suggestion">
-        <ul>
-            <li>Buy <progress value="54" max="100">54</progress></li>
-            <li>Hold <progress value="34" max="100">54</progress></li>
-            <li>Sell <progress value="75" max="100">54</progress></li>
-        </ul>
-    </div>
-<!------------------------------->    
-    <div class="wallet">
-        
-        <ul>
-            <li><b>Top Gainers:</b></li>
-            <li>TATA</li>
-            <li>JIO</li>
-            <li>TESALA</li>
-            <li>META</li>
-        </ul>
-    </div>
-<div class="compnay">
-    <ul>
-        <li><b>compnay</b></li>
-        <li>Bank Of Baroda</li>
-        <li>Paytm</li>
-        <li>Reliance</li>
-        <li>Tata Motors</li>
-        <li>Vodafone Idea</li>
-        <li>Yes Bank</li>
-        <li>Jaiprakash Power</li>
-    </ul>
-</div>
-<div class="news">
-    Lorem ipsum dolor sit amet consectetur,<br>
-     adipisicing elit. Mollitia explicabo quam suscipit culpa, <br>
-     voluptatibus molestiae?
-</div>
-</body>
+        <div class="suggestion">
+            <ul>
+                <li>Buy <progress id="buy" value="54" max="100">54</progress></li>
+                <li>Hold <progress id="sell" value="34" max="100">54</progress></li>
+                <li>Sell <progress id="hold" value="75" max="100">54</progress></li>
+            </ul>
+        </div>
+        <!------------------------------->
+        <div class="wallet">
+            
+            <ul>
+                <li><b>Top Gainers:</b></li>
+                <li>TATA</li>
+                <li>JIO</li>
+                <li>TESALA</li>
+                <li>META</li>
+            </ul>
+        </div>
+        <div class="compnay">
+            <form method="POST" class="company-info">
+                <h1>Compony</h1>
+                {% csrf_token %}
+                <a href="main"><input type="submit" class="even" name="company" value="TCS" /></a>
+                <a href="main"><input type="submit" class="odd" name="company" value="Wipro" /></a>
+                <a href="main"><input type="submit" class="even" name="company" value="IBM" /></a>
+                <a href="main"><input type="submit" class="odd" name="company" value="Tesla" /></a>
+                <a href="main"><input type="submit" class="even" name="company" value="Tata Motors" /></a>
+                <a href="main"><input type="submit" class="odd" name="company" value="Infosys" /></a>
+                <a href="main"><input type="submit" class="even" name="company" value="SBI" /></a>
+                <a href="main"><input type="submit" class="odd" name="company" value="ICIC Bank" /></a>
+                <a href="main"><input type="submit" class="even" name="company" value="Amazon" /></a>
+                <a href="main"><input type="submit" class="odd" name="company" value="Google" /></a>
+            </form>
+        </div>
+        <div class="news">
+            Lorem ipsum dolor sit amet consectetur,<br>
+            adipisicing elit. Mollitia explicabo quam suscipit culpa, <br>
+            voluptatibus molestiae?
+        </div>
+        <script>
+        var data = JSON.parse("{{data|escapejs}}");
+        var myChart = new Chart(document.getElementById("chart"), {
+        type: "line",
+        data: {
+        labels: data["time"],
+        datasets: [{
+        fill: false,
+        lineTension: 0,
+        backgroundColor: "blue",
+        borderColor: "rgb(23, 226, 33)",
+        data: data["value"]
+        }]
+        },
+        options: {
+        legend: { display: false },
+        scales: {
+        yAxes: [{ ticks: { min: data["minval"], max: data["maxval"] } }],
+        }
+        }
+        });
+        var avg = (data["open"] + data["close"]) / 2;
+        if (data["open"] > data["close"]) {
+        document.getElementById("sell").value = avg * 0.50;
+        }
+        if (data["open"] < data["close"]) {
+        document.getElementById("buy").value = avg * 0.40;
+        }
+        if ((data["open"] - data["close"]) < 30 && (data["open"] - data["close"]) > 0) {
+        document.getElementById("hold").value = avg * 0.30;
+        }
+        </script>
+    </body>
 </html>
