@@ -1,4 +1,4 @@
-
+function stock(){
 var xyValues = [
   {x:50, y:7},
   {x:60, y:8},
@@ -30,3 +30,4 @@ new Chart("chart", {
     }
   }
 });
+}
