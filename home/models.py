@@ -17,3 +17,5 @@ class wallet(models.Model):
     invested = models.IntegerField(null=False)
     profit= models.IntegerField(null=False)
     total = models.IntegerField(null=False)
+    user = models.ForeignKey(UserInfo, on_delete=models.CASCADE)
+    company = models.ForeignKey(Company,on_delete=models.CASCADE)
