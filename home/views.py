@@ -21,6 +21,7 @@ compony = {
 
 # Create your views here.
 def index(request):
+    
     response = requests.get('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=f3831cf4b9e34369843e9062f75e80f1')
     news = response.json()
     news_title = []
@@ -30,6 +31,7 @@ def index(request):
     data  = {"news_title": news_title}
     data=dumps(data)
     return render(request,"home.html",{'data': data})
+    #return render(request,"home.html")
 
 def login(request):
     if request.method=="POST":
