@@ -1,0 +1,161 @@
+<head>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #04AA6D;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: rgb(53, 248, 4);
+  color: black;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #04AA6D;
+  color: white;
+  font-family: "serif";
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.row:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<div class="navbar">
+  <a href="./help.html" class="right">Help</a>
+  <a href="./login.html" class="right">Login</a>
+  <a href="./home.html" class="right">News Feed</a>
+  <a href="./home.html" class="right">Home</a>
+</div>
+
+<div class="about-section">
+  
+  <h1 style="font-size:50px;">About Us </h1>
+  <h2 style="font-size:30px;">Hey Investor!!! <br>Welcome to Financers</h2>
+<p style="font-size:20px"> Financers is one destination  for mutual funds and stocks. It will  provide user with real time stock ranges.After  creating  an  account  on  website,  user  can  access  the  features  such  as  real-time  Visual base stat  analysis  with help  of  that  user  can  plan  strategy. Quantity  model  helps  the  user  to  implement  their  strategy  regarding their  trading  such  as whether  to buy  sell  or  hold the  stock. News  feed  feature  will  give  the  information  regarding  stock  market  and  companies in  which user can  trade. 
+</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="" alt="Shubham" style="width:100%" CLASS="image">
+      <div class="middle">
+        <div class="text">Shubham Kite</div>
+      </div>
+      <div class="container">
+        <p class="title">Group leader</p>
+        <p>cricketfc01@gmail.com</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="surbhi.jpg" alt="Surbhi" style="width:100%" class="image">
+      <div class="middle">
+        <div class="text">Surbhi Khandelwal</div>
+      </div>
+      <div class="container">
+        <p class="title">Team Member</p>
+        <p>ksurbhi267@gmail.com</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="" alt="Siddharth" style="width:100%" class="image">
+      <div class="middle">
+        <div class="text">Siddharth Yadav</div>
+      </div>
+      <div class="container">
+        <p class="title">Team Member</p>
+        <p>yadavsiddharthv@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</div>

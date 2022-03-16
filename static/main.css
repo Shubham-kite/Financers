@@ -17,7 +17,7 @@ body{
     height:30px;
     border-radius: 7px;
     padding:7px;
-    margin-top:12px;
+    margin-top:10px;
     text-align: center;
     box-shadow:5px 3px 2px 1px #D8D2CB;
 }
@@ -64,7 +64,7 @@ body{
 {
     margin-left:66%;
     border:1px solid;
-    margin-top:-41.5%;
+    margin-top:-48.5%;
     border-radius: 7px;
     height:250px;
     padding:7px;
@@ -85,7 +85,7 @@ body{
     border:1px solid;
     margin-left: 18%;
     width:550px;
-    margin-top:-34.5%;
+    margin-top:-30.5%;
     border-radius: 7px;
     padding:7px;
     box-shadow:5px 3px 2px 1px #D8D2CB;
@@ -107,8 +107,8 @@ body{
     margin-left:18%;
     border:1px solid;
     margin-top:22px;
-    height:260px;
-    width:550px;
+    height:275px;
+    width:565px;
     border-radius: 7px;
     padding:7px;
     box-shadow:5px 3px 2px 1px #D8D2CB;
@@ -168,6 +168,7 @@ progress::-webkit-progress-value {
     color:rgb(211,196,151);
 
 }
+
 .compnay ul li 
 {
     margin-top: 7px;
@@ -175,12 +176,12 @@ progress::-webkit-progress-value {
 }
 .compnay ul li:hover
 {
-    background-color:black;
+    background-color:rgba(0, 0, 0, 0.336);
     padding:5px;
     border-radius: 5px;
 }
 /*------------------News-Feed-----------------------------*/
-.news
+/*.news
 {
     border:1px solid;
     margin-top:80px;
@@ -188,7 +189,7 @@ progress::-webkit-progress-value {
     border-radius: 7px;
     box-shadow:5px 3px 2px 1px #D8D2CB;
     color:black;
-}
+}*/
 .btn{
     margin-left: 49%;
     margin-top:15px;
@@ -212,4 +213,13 @@ progress::-webkit-progress-value {
     border-radius:7px;
     border-style: none;
     box-shadow:5px 3px 2px 1px #D8D2CB;
+}
+.even
+{
+    background-color:transparent;
+    color:rgb(211,196,151);
+}
+.odd{
+    background-color:transparent;
+    color:rgb(211,196,151);
 }
