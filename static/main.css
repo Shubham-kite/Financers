@@ -19,7 +19,7 @@ body{
     padding:7px;
     margin-top:10px;
     text-align: center;
-    box-shadow:5px 3px 2px 1px #D8D2CB;
+    box-shadow: 5px 5px 10px #ccc;
 }
 .nav
 {
@@ -29,7 +29,7 @@ body{
     margin-top:13px;
     border-radius: 7px;
     padding:7px;
-    box-shadow:5px 3px 2px 1px #D8D2CB;
+    box-shadow: 5px 5px 10px #ccc;
     background-color:rgba(45,79,117,255);
     color:rgb(211,196,151);
     
@@ -55,7 +55,7 @@ body{
     margin-left: 270px;
     margin-top:-39px;
     padding:7px;
-    box-shadow:5px 3px 2px 1px #D8D2CB;
+    box-shadow: 5px 5px 10px #ccc;
     background-color:rgba(45,79,117,255);
     color:rgb(211,196,151);
 }
@@ -68,7 +68,7 @@ body{
     border-radius: 7px;
     height:250px;
     padding:7px;
-    box-shadow:5px 3px 2px 1px #D8D2CB;
+    box-shadow: 5px 5px 10px #ccc;
     background-color:rgba(45,79,117,255);
     color:rgb(211,196,151);
 
@@ -88,7 +88,7 @@ body{
     margin-top:-30.5%;
     border-radius: 7px;
     padding:7px;
-    box-shadow:5px 3px 2px 1px #D8D2CB;
+    box-shadow: 5px 5px 10px #ccc;
     background-color:#1C658C;
     color:rgba(233, 204, 41, 0.904);
 }
@@ -111,7 +111,7 @@ body{
     width:565px;
     border-radius: 7px;
     padding:7px;
-    box-shadow:5px 3px 2px 1px #D8D2CB;
+    box-shadow: 5px 5px 10px #ccc;
    /* background-color:#1C658C;
     color:rgba(233, 204, 41, 0.904);*/
 }
@@ -125,7 +125,7 @@ body{
     width:600px;
     border-radius: 7px;
     padding:7px;
-    box-shadow:5px 3px 2px 1px #D8D2CB;
+    box-shadow: 5px 5px 10px #ccc;
     background-color:#1C658C;
     color:rgba(233, 204, 41, 0.904);
 }
@@ -161,7 +161,7 @@ progress::-webkit-progress-value {
     text-align: center;
     height:max-content;
     padding:7px;
-    box-shadow:5px 3px 2px 1px #D8D2CB;
+    box-shadow: 5px 5px 10px #ccc;
     /*background-color:#1C658C;
     color:rgba(233, 204, 41, 0.904);*/
     background-color:rgba(45,79,117,255);
@@ -203,7 +203,7 @@ progress::-webkit-progress-value {
     border-radius:7px;
     border-style: none;
     background-color:rgb(166, 255, 64);
-    box-shadow:5px 3px 2px 1px #D8D2CB;
+    box-shadow: 5px 5px 10px #ccc;
 }
 #sell-btn
 {
@@ -212,7 +212,7 @@ progress::-webkit-progress-value {
     background-color:rgb(255, 64, 64);
     border-radius:7px;
     border-style: none;
-    box-shadow:5px 3px 2px 1px #D8D2CB;
+    box-shadow: 5px 5px 10px #ccc;
 }
 .even
 {
