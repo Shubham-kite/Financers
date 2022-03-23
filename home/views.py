@@ -4,7 +4,9 @@ from .models import UserInfo
 from django.http import JsonResponse
 from json import dumps
 import requests
-
+#login and authentication 
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User,auth
 compony = {
     "TCS":"TCS",
     "Wipro":"WTI",
@@ -42,7 +44,7 @@ def login(request):
         #posting data into db 
         userdata = UserInfo(name = name,email = email,password = passwd,contact = contact).save()
     return render(request,"login.html")
-
+    ''' here we have to add authentication '''
 def signup(request):
     return render(request,"signup.html")
 
@@ -96,7 +98,8 @@ def main(request):
 
     data=dumps(data)
     return render(request,"main.html",{'data': data,"stock":stock})
-
+'''avoid un autherized login '''   
+#@login_required(login_url='login.html')
 def wallet(request):
     return render(request,"wallet.html")
 def help(request):
