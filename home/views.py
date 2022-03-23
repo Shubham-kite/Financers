@@ -1,4 +1,4 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render,HttpResponse,redirect
 #importing models
 from .models import UserInfo
 from django.http import JsonResponse
@@ -7,6 +7,8 @@ import requests
 #login and authentication 
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User,auth
+
+
 compony = {
     "TCS":"TCS",
     "Wipro":"WTI",
@@ -36,18 +38,33 @@ def index(request):
     #return render(request,"home.html")
 
 def login(request):
+    if request.method == "POST":
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = auth.authenticate(username=username,password=password)
+        if user is not None:
+            auth.login(request,user)
+            return redirect("./main")
+        else:
+            return redirect('/login')
+    return render(request,"login.html")
+    ''' here we have to add authentication '''
+def signup(request):
     if request.method=="POST":
         name = request.POST.get("user")
         email = request.POST.get("username")
         passwd = request.POST.get("password")
         contact = request.POST.get("contact")
-        #posting data into db 
-        userdata = UserInfo(name = name,email = email,password = passwd,contact = contact).save()
-    return render(request,"login.html")
-    ''' here we have to add authentication '''
-def signup(request):
+        
+        if User.objects.filter(username=email).exists():
+            return render(request,"signup.html")
+        else:
+            User.objects.create_user(username=email,password=passwd,first_name=name,email=email)
+            userdata = UserInfo(name = name,email = email,password = passwd,contact = contact).save()
+            return redirect('/login')
     return render(request,"signup.html")
 
+@login_required(login_url='login')
 def main(request):
     if request.method == "POST":
         comp = request.POST['company']
@@ -99,9 +116,11 @@ def main(request):
     data=dumps(data)
     return render(request,"main.html",{'data': data,"stock":stock})
 '''avoid un autherized login '''   
+
 #@login_required(login_url='login.html')
 def wallet(request):
     return render(request,"wallet.html")
+
 def help(request):
     return render(request,"help.html")
 
