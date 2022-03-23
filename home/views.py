@@ -12,7 +12,7 @@ compony = {
     "Tata Motors":"TTM",
     "Infosys":"INFY",
     "SBI":"SBI",
-    "Tesla":"TSLA",
+    "Reliance":"RCOM",
     "Amazon":"AMZN",
     "Google":"GOOGL",
     "IBM":"IBM"
