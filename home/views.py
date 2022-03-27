@@ -64,7 +64,7 @@ def signup(request):
             return redirect('/login.html')
     return render(request,"signup.html")
 
-@login_required(login_url='login.html')
+#@login_required(login_url='login.html')
 def main(request):
     if request.method == "POST":
         comp = request.POST['company']
@@ -117,7 +117,7 @@ def main(request):
     return render(request,"main.html",{'data': data,"stock":stock})
 '''avoid un autherized login '''   
 
-#@login_required(login_url='login.html')
+@login_required(login_url='login.html')
 def wallet(request):
     return render(request,"wallet.html")
 
