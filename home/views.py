@@ -44,9 +44,9 @@ def login(request):
         user = auth.authenticate(username=username,password=password)
         if user is not None:
             auth.login(request,user)
-            return redirect("./main")
+            return redirect("./main.html")
         else:
-            return redirect('/login')
+            return redirect('/login.html')
     return render(request,"login.html")
     ''' here we have to add authentication '''
 def signup(request):
@@ -61,10 +61,10 @@ def signup(request):
         else:
             User.objects.create_user(username=email,password=passwd,first_name=name,email=email)
             userdata = UserInfo(name = name,email = email,password = passwd,contact = contact).save()
-            return redirect('/login')
+            return redirect('/login.html')
     return render(request,"signup.html")
 
-@login_required(login_url='login')
+@login_required(login_url='login.html')
 def main(request):
     if request.method == "POST":
         comp = request.POST['company']
