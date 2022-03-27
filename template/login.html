@@ -10,24 +10,23 @@
 <body>
     <nav class="navbar">
         <ul>
-            <li><a href="./help.html">Help</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./home.html">Home</a></li>
+            <li><a href="help">Help</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="home">Home</a></li>
         </ul>
     </nav>
     <br>
     <center>
         <fieldset>
-            <form method="post" action="./wallet.html">
+            <form method="post" action="">
                 {% csrf_token %}
                 <img src="https://bit.ly/32WLgw0" alt="coin image" class="coin"><br>
                 <input type="email" placeholder="username-email" name="username"><br>
                 <input type="password" placeholder="password" name="password"><br>
                 <input type="submit" value="login" class="btn">
             </form>
-            <p>Don't Have an account then <a href="./signup.html">Click here</a></p>
+            <p>Don't Have an account then <a href="signup">Click here</a></p>
         </fieldset>
-   
-</center>
+    </center>
 </body>
 </html>
