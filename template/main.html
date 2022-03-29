@@ -13,15 +13,31 @@
     </head>
     <body>
      <p id="user">Good Morning</p>
+     <script>
+         let val = document.getElementById('user')
+         let newdate = new Date()
+         if(newdate.getHours() >16 && newdate.getHours() <22)
+            {
+                val.innerHTML="Good Evening"
+            } 
+        else if(newdate.getHours()>12 && newdate.getHours()<16)
+            {
+
+                val.innerHTML="Good Afternoon"
+            }
+        else
+            {
+                val.innerHTML="Good Morning"
+            }
+     </script>
         
         <p id="cal"><script src="{% static '/calender.js' %}"></script></p>
         <div class="nav">
             <ul>
                 <li>Home</li>
-                <li>#</li>
-                <li>#</li>
+                <li>Main</li>
                 <li>Help</li>
-                <li>LogOut</li>
+                <li>About</li>
             </ul>
         </div>
         <div class="Calculation">
